@@ -1,0 +1,20 @@
+function isValidDate(day, month, year) {
+    
+    const date = new Date(year, month - 1, day);
+
+    return (
+        date.getFullYear() === year &&
+        date.getMonth() === month - 1 &&
+        date.getDate() === day
+    );
+}
+
+const day = 31;
+const month = 4;
+const year = 2024;
+
+if (isValidDate(day, month, year)) {
+    console.log(`${day}/${month}/${year} is a valid date.`);
+} else {
+    console.log(`${day}/${month}/${year} is not a valid date.`);
+}
